@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strawberry>
+	<userlist>
+		<kimchi>홍길동</kimchi>
+		<korea>25</korea>
+		<blue>hong@nate.com</blue>
+	</userlist>
+	<userlist>
+		<kimchi>김유신</kimchi>
+		<korea>30</korea>
+		<blue>kimyou@nate.com</blue>
+	</userlist>
+</strawberry>

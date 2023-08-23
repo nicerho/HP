@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<script>
+		function log() {
+			var ck = "yes"; //해당 변수는 사용자가 조건에 맞는 모든 값을 입력하였을 경우 submit이 작동되도록 한다
+			//class 형태의 js
+			var ea = document.getElementsByClassName("no").length; // 같은 클래스를 모두 가져온다
+			var w = 0;
+			while (w < ea) {
+				if (document.getElementsByName("no")[w].value == "") {
+					alert("숫자값을 입력하시오");
+					ck = "no";
+					break;
+				} else {
+					if (isNaN(document.getElementsByName("no")[w].value) == true) { //NaN ? 숫자가 아니다 isNaN : true(문자),false(숫자)
+						alert("숫자만 입력하시오");
+						ck = "no";
+						break;
+					}
+				}
+				w++
+			}
+			if (ck == "yes") {
+				f.submit();
+			}
+
+
+			//id 형태의 js
+			/*var w = 0;
+			while(w<6){
+				var ids = document.getElementById("no"+w);
+				if(ids.value==""){
+					alert("숫자값을 모두 입력하시오");
+					ids.focus();
+					break;
+				}
+				w++;
+			}*/
+			//f.submit();
+		}
+		function bbb() {
+			var data = [];
+			var d = [1, 2, 3, 4, 5];
+			var z = ["1", "2", "3", "4", "5"];
+			var money = ["2000", "5000", "1500", "8800"];
+			console.log("z 길이 : " + z.length);
+			console.log(d[2]);
+			data[0] = "kkk";
+			console.log(data);
+			var w = 0;
+			while (w < d.length) {
+				document.getElementById("uldata").innerHTML += "<li>" + d[w] + "</li>";
+				w++
+			}
+			//장바구니에 담긴 총 합계금액
+			var ww = 0;
+			var total = 0;
+			do {
+				//total += parseInt(money[ww])
+				total += Number(money[ww])
+				ww++
+			} while (ww < money.length)
+			console.log(total);
+
+
+		}
+	</script>
+	<form method="post" id="f" action="./lotto_ok.do">
+		no1 : <input type="text" name="no" id="no0" class="no">
+		<br>
+		no2 : <input type="text" name="no" id="no1" class="no">
+		<br>
+		no3 : <input type="text" name="no" id="no2" class="no">
+		<br>
+		no4 : <input type="text" name="no" id="no3" class="no">
+		<br>
+		no5 : <input type="text" name="no" id="no4" class="no">
+		<br>
+		no6 : <input type="text" name="no" id="no5" class="no">
+		<br>
+		<input type="button" value="전송" onclick="log()">
+	</form>
+	<!--js 배열형태-->
+	<input type="button" value="배열클릭" onclick="bbb()">
+	<ul id="uldata">
+
+	</ul>
+</body>
+
+</html>

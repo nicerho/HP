@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>GET을 이용한 JSON 파일로드 CORS를 통과하는 형태의 통신</title>
+</head>
+
+<body>
+	<input type="button" value="파일로드" onclick="abc()">
+	<div id="list">
+
+	</div>
+</body>
+<!--
+	상대방 서버와 데이터를 받는 서버에서 callback 이름을 이용하여 배열데이터를 받을 수 있도록 JSON을 수정
+	그 외에 callback에서 사용한 이름을 함수명으로 설정 후 인자값의 이름을 설정 후 console.log 실행 시 해당 배열 데이터를 출력 할 수 있다	
+-->
+<script src="./array3.js?v=1"></script>
+<script src="http://192.168.110.230:8081/web/userlist.json?callback=calldata&v=1"></script>
+
+</html>

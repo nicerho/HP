@@ -1,0 +1,22 @@
+{
+	"member_list": [
+		{
+			"name": "홍길동",
+			"age": "25",
+			"level": 3,
+			"point": 2500
+		},
+		{
+			"name": "낄낄",
+			"age": "22",
+			"level": 1,
+			"point": 500
+		},
+		{
+			"name": "허허허",
+			"age": "44",
+			"level": 5,
+			"point": 8000
+		}
+	]
+}

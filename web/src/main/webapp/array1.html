@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>배열구조 생성법 및 콘솔출력 1</title>
+</head>
+
+<body>
+	<input type="button" value="배열1" onclick="a()">
+	<input type="button" value="배열2" onclick="b()">
+	<input type="button" value="배열3" onclick="c()">
+	<input type="button" value="배열4" onclick="d()">
+	<div id="box">
+		<!--
+			<ul>
+			<li>아이디 : </li>
+			<li>고객명 : </li>
+			<li>나이 : </li>
+		</ul>
+		-->
+	</div>
+</body>
+<script>
+	var html = document.getElementById("box");
+	function a() {
+		//{} 배열 구조는 대표key가 있으며, 단 대표 key는 중복되어서는 아니된다
+		var data = {
+			"myinfo1": ["홍길동", "25", "hong@nate.com"],
+			"myinfo2": ["홍ㅇㅇ", "23", "hong2@nate.com"]
+		}
+		console.log(data)
+	}
+	function b() {
+		//대표 key(테이블명), 대표key 안에 각각의 파트별로 보조key(컬럼명)가 존재, 이를 이용하여 배열을 설계하는 방식
+		var data = {
+			"myinfo": [{
+				"id": "hong",
+				"name": "홍길동",
+				"age": "99"
+			}, {
+				"id": "dd",
+				"name": "홍길동",
+				"age": "22"
+			}]
+		}
+		var ea = data["myinfo"].length;
+		console.log(ea);
+		var w = 0;
+		var html = document.getElementById("box");
+		while (w < ea) {
+			//console.log(data["myinfo"][w]["id"])
+			html.innerHTML += `
+			<ul>
+			<li>아이디 : `+ data["myinfo"][w]["id"] + `</li>
+			<li>고객명 :  `+ data["myinfo"][w]["name"] + `</li>
+			<li>나이 :  `+ data["myinfo"][w]["age"] + `</li>
+			</ul>
+			`;
+			w++
+		}
+
+	}
+	function c() {
+		//대표 key(테이블명)이며, 그 외에 2차배열 형태로 데이터값을 순서대로 나열하여 출력하는 배열형태
+		var data = {
+			"myinfo": [
+				["hong", "25", "hong@nate.com"],
+				["kong", "35", "hong@nate.com"]
+			]
+		}
+		console.log(data);
+	}
+	function d() {
+		var data = {
+			"myinfo": [
+				{"id": "hong", "name": "홍길동", "age": "55", "log_history": [{"last_day": "2023-08-09"}]},
+				{"id": "kong", "name": "kong길동", "age": "45", "log_history": [{"last_day": ""}]}
+			]
+		}
+		console.log(data);
+	}
+</script>
+
+</html>
