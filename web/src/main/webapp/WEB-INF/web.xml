@@ -6,29 +6,30 @@
 	<display-name>web</display-name>
 	<!-- xml에 오타 발생시 서버가 실행X -->
 	<servlet>
-		<servlet-name>search</servlet-name> <!-- 가상으로 사용하는 이름 (중복은 불가) -->
-		<servlet-class>web.Main</servlet-class>
+		<servlet-name>reserve</servlet-name> <!-- 가상으로 사용하는 이름 (중복은 불가) -->
+		<servlet-class>web.Reserve</servlet-class>
 	</servlet>
 	<!-- mapping이란 : java Controller 가상의 웹주소를 설정하는 공간 -->
 	<servlet-mapping>
-		<servlet-name>search</servlet-name>
-		<url-pattern>/indexok.do</url-pattern> <!-- 패턴은 중복 불가능 또한 "/" 기준이 필수 -->
+		<servlet-name>reserve</servlet-name>
+		<url-pattern>/test/reserveok.do</url-pattern> <!-- 패턴은 중복 불가능 또한 "/" 기준이 필수 -->
 	</servlet-mapping>
 	<!-- 계산 페이지 -->
 	<servlet>
-		<servlet-name>cal_page</servlet-name>
-		<servlet-class>web.cal</servlet-class> <!-- 패키지명 package.class -->
+		<servlet-name>login</servlet-name>
+		<servlet-class>web.Login</servlet-class> <!-- 패키지명 package.class -->
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>cal_page</servlet-name>
-		<url-pattern>/calok.do</url-pattern>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/test/loginok.do</url-pattern>
 	</servlet-mapping>
 	<servlet>
-	<servlet-name>lotto</servlet-name>
-	<servlet-class>web.Lotto</servlet-class>
+	<servlet-name>join</servlet-name>
+	<servlet-class>web.Join</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>lotto</servlet-name>
-		<url-pattern>/lotto_ok.do</url-pattern>
+		<servlet-name>join</servlet-name>
+		<url-pattern>/test/joinok.do</url-pattern>
 	</servlet-mapping>
 </web-app>
+<?target data?>

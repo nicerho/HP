@@ -1,0 +1,4 @@
+function join() {
+	f.submit();
+
+}
