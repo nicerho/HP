@@ -1,0 +1,39 @@
+    <div id="authimg" style="width:387px;height:296px;border:3px solid #647ea1;background-color:#fff; z-index:5;">
+        <h1 style="height:45px;line-height:45px;margin-bottom:35px;margin-top:0px;padding-left:30px;font-size:16px;color:#fff;font-weight:bold;background-color:#525c6a;position:relative;">
+            자동입력방지 프로그램
+            <a href="#none" onclick="javascript:document.getElementById('authimg').style.display='none';" style="position: absolute; top: 0; right: 0; cursor: pointer; fitler: alpha(opacity=0); background-color: #fff;"><img alt="닫기" src="/images/d3/modern_simple/btn/btn_close_h18.gif" border="0" /></a>
+        </h1>
+        <div style="width:320px;margin:0 30px;">
+            <table style="border-width: 2px 0 2px 0; border-color: #384150; border-style: solid;">
+                <colgroup>
+                    <col width="135"/><col width="*"/>
+                </colgroup>
+
+                <tr class="user-name" height="38" style="border-bottom: 1px solid;">
+                    <th>
+                        <div style="text-align:center;font-size:12px;">인증키 보기</div>
+                    </th>
+                    <td>
+                        <div style="text-align:left;">
+                            <label><img src=/etc/authimg.html?authid=3493675 alt='인증이미지'></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr height="38">
+                    <th>
+                        <div style="text-align:center;font-size:12px;">인증키 입력</div>
+                    </th>
+                    <td>
+                        <div style="text-align:left;">
+                            <input type="text" name="authtext" id="authtext" value="" style="text-transform:uppercase;ime-mode:active;width: 135px; height: 18px; line-height: 18px;" size="10" maxlength="5" onkeydown='CheckKey(event)'>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="btn-area" style="margin-top:20px; text-align:center;">
+                <a href="javascript:send()"><img alt="확인" src="/images/d3/modern_simple/btn/btn_confirm.gif" border="0"/></a>
+            </div>
+        </div>
+    </div> <!-- #authimg-new -->
+    <input type="hidden" name="authid" id="authid" value='3493675'><script>document.form1.authtext.focus();</script>
